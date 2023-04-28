@@ -1,68 +1,79 @@
-import streamlit as st
 import time
 
-def choice_1():
+# Introduction
+print("Welcome to Stop Deforestation! In this game, you will make choices to help stop deforestation and save the environment.")
+
+# Start of the game
+print("\nYou wake up one morning to find that the forest behind your house is being cut down. What do you do?")
+time.sleep(1)
+
+# Choice 1
+print("\n1. Call the local authorities and report the illegal logging.")
+print("2. Ignore it and go on with your day.")
+
+choice = input("Enter your choice (1 or 2): ")
+
+if choice == "1":
     # Choice 1 outcome
-    st.write("Good choice! You called the authorities and they were able to stop the illegal logging. However, you soon realize that this is not an isolated incident and deforestation is a big problem in your area.")
+    print("\nGood choice! You called the authorities and they were able to stop the illegal logging. However, you soon realize that this is not an isolated incident and deforestation is a big problem in your area.")
     time.sleep(2)
 
     # Choice 2
-    st.write("\nWhat do you do next?")
-    choice = st.radio("", ["Join a local environmental group and organize a protest.", "Donate money to a conservation organization."])
+    print("\nWhat do you do next?")
+    print("1. Join a local environmental group and organize a protest.")
+    print("2. Donate money to a conservation organization.")
 
-    if choice == "Join a local environmental group and organize a protest.":
+    choice = input("Enter your choice (1 or 2): ")
+
+    if choice == "1":
         # Choice 2 outcome
-        st.write("Great job! You organized a successful protest and brought attention to the issue of deforestation in your area. The government has promised to take action to protect the forests.")
+        print("\nGreat job! You organized a successful protest and brought attention to the issue of deforestation in your area. The government has promised to take action to protect the forests.")
         time.sleep(2)
 
         # Choice 3
-        st.write("\nWhat do you do next?")
-        choice = st.radio("", ["Volunteer to plant trees in the forest.", "Write a letter to your local newspaper to raise awareness about deforestation.", "Lobby your elected officials to pass laws protecting forests."])
+        print("\nWhat do you do next?")
+        print("1. Volunteer to plant trees in the forest.")
+        print("2. Write a letter to your local newspaper to raise awareness about deforestation.")
 
-        if choice == "Volunteer to plant trees in the forest.":
+        choice = input("Enter your choice (1 or 2): ")
+
+        if choice == "1":
             # Choice 3 outcome
-            st.write("By volunteering to plant trees, you are helping to restore the forest and prevent further deforestation. You have made a real difference for the environment!")
+            print("\nBy volunteering to plant trees, you are helping to restore the forest and prevent further deforestation. You have made a real difference for the environment!")
             time.sleep(2)
 
             # End of the game
-            st.write("\nCongratulations! You have helped stop deforestation in your area and made a difference for the environment.")
+            print("\nCongratulations! You have helped stop deforestation in your area and made a difference for the environment.")
 
-        elif choice == "Write a letter to your local newspaper to raise awareness about deforestation.":
+        elif choice == "2":
             # Choice 3 outcome
-            st.write("Your letter raises awareness about deforestation and inspires others to take action. Together, you are able to make a real difference for the environment!")
+            print("\nYour letter raises awareness about deforestation and inspires others to take action. Together, you are able to make a real difference for the environment!")
             time.sleep(2)
 
             # End of the game
-            st.write("\nCongratulations! You have helped stop deforestation in your area and made a difference for the environment.")
+            print("\nCongratulations! You have helped stop deforestation in your area and made a difference for the environment.")
 
-        elif choice == "Lobby your elected officials to pass laws protecting forests.":
-            # Choice 3 outcome
-            st.write("Your lobbying efforts pay off and new laws are passed to protect forests. You have made a real difference for the environment!")
-            time.sleep(2)
+        else:
+            print("\nInvalid input. Please try again.")
 
-            # End of the game
-            st.write("\nCongratulations! You have helped stop deforestation in your area and made a difference for the environment.")
-
-    elif choice == "Donate money to a conservation organization.":
+    elif choice == "2":
         # Choice 2 outcome
-        st.write("Donating money is a good start, but it's not enough to solve the problem of deforestation. The forests continue to be destroyed and the environment is still at risk.")
+        print("\nDonating money is a good start, but it's not enough to solve the problem of deforestation. The forests continue to be destroyed and the environment is still at risk.")
         time.sleep(2)
 
         # End of the game
-        st.write("\nGame over. Try again and make different choices to help stop deforestation.")
+        print("\nGame over. Try again and make different choices to help stop deforestation.")
 
-def main():
-    # Introduction
-    st.title("Stop Deforestation")
-    st.write("Welcome to Stop Deforestation! In this game, you will make choices to help stop deforestation and save the environment.")
+    else:
+        print("\nInvalid input. Please try again.")
 
-    # Start of the game
-    st.write("\nYou wake up one morning to find that the forest behind your house is being cut down. What do you do?")
-    choice = st.radio("", ["Call the local authorities and report the illegal logging.", "Ignore it and go on with your day."])
+elif choice == "2":
+    # Choice 1 outcome
+    print("\nIgnoring the problem won't make it go away. The forests continue to be destroyed and the environment is still at risk.")
+    time.sleep(2)
 
-    if choice == "Call the local authorities and report the illegal logging.":
-        choice_1()
+    # End of the game
+    print("\nGame over. Try again and make different choices to help stop deforestation.")
 
-    elif choice == "Ignore it and go on":
-        print("Ignore it and go on")
-
+else:
+    print("\nInvalid input. Please try again.")
